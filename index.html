@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로또 번호 생성기</title>
+    <title>Lotto Number Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>로또 번호 생성기</h1>
-        <div class="lotto-numbers">
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-            <span class="number"></span>
-        </div>
-        <button id="generate-btn">번호 생성</button>
+        <header>
+            <h1>Lotto Number Generator</h1>
+        </header>
+        <main>
+            <div id="numbers" class="numbers-container"></div>
+        </main>
+        <footer>
+            <button id="generate">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Generate Numbers
+            </button>
+        </footer>
     </div>
     <script src="main.js"></script>
 </body>
