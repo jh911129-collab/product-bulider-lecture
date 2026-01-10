@@ -1,105 +1,75 @@
-/* General Styles */
-:root {
-    --primary-color: oklch(65% 0.25 260);
-    --background-gradient-start: oklch(40% 0.2 250);
-    --background-gradient-end: oklch(20% 0.2 270);
-    --card-background: oklch(98% 0.02 260 / 0.8);
-    --text-color: oklch(20% 0.05 260);
-    --shadow-color: oklch(20% 0.05 260 / 0.2);
-    --glow-color: oklch(65% 0.25 260 / 0.5);
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 body {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--text-color);
-    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    position: relative;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)"/></svg>');
-    z-index: -1;
+    background: #f0f2f5;
+    color: #333;
 }
 
 .container {
-    padding: 2rem;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-/* Card Styles */
-.card {
-    background: var(--card-background);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid oklch(98% 0.02 260 / 0.2);
-    box-shadow: 0 1rem 2rem var(--shadow-color), 0 0 0 1px oklch(98% 0.02 260 / 0.2);
-    text-align: center;
-    max-width: 500px;
-    width: 100%;
+.container:hover {
+    transform: translateY(-5px);
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 30px;
+    color: #1a73e8;
     font-weight: 700;
-    letter-spacing: -1px;
 }
 
-/* Lotto Numbers Styles */
-.lotto-numbers-container {
+.lotto-numbers {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    min-height: 50px; /* To prevent layout shift */
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-lotto-ball {
-    --ball-color: var(--primary-color);
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
+.number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e9ecef;
+    font-size: 24px;
+    font-weight: 700;
+    color: #495057;
+    transition: all 0.3s ease;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Generate Button Styles */
-.generate-btn {
-    background-color: var(--primary-color);
+#generate-btn {
+    background-color: #1a73e8;
     color: white;
     border: none;
-    border-radius: 0.75rem;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 8px;
     cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: 0 0.5rem 1rem var(--shadow-color);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(26, 115, 232, 0.4);
 }
 
-.generate-btn:hover {
+#generate-btn:hover {
+    background-color: #155ab6;
     transform: translateY(-2px);
-    box-shadow: 0 0.5rem 1rem var(--shadow-color), 0 0 2rem var(--glow-color);
 }
 
-.generate-btn:active {
-    transform: translateY(0);
+#generate-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(26, 115, 232, 0.4);
 }
