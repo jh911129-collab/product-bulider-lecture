@@ -260,3 +260,84 @@ lotto-ball {
 .footer-nav a:hover {
     text-decoration: underline;
 }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        padding: 0.8rem 0;
+        display: block;
+    }
+
+    .language-switcher .current-lang {
+        padding: 0.8rem 0;
+    }
+
+    .lang-dropdown {
+        position: static;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .numbers-container {
+        gap: 0.5rem;
+    }
+
+    lotto-ball {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #generate {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .content-section {
+        padding: 1rem;
+    }
+
+    #contact-form-section input[type="text"],
+    #contact-form-section input[type="email"],
+    #contact-form-section textarea {
+        padding: 0.6rem;
+    }
+
+    #contact-form-section button[type="submit"] {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}

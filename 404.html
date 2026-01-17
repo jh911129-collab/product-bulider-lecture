@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found - Lotto Number Generator</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            font-size: 3rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+        .error-links a {
+            display: inline-block;
+            margin: 0 0.8rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            background-color: oklch(65% 0.15 260);
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .error-links a:hover {
+            background-color: oklch(60% 0.18 260);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>404</h1>
+        <p>죄송합니다. 요청하신 페이지를 찾을 수 없습니다.</p>
+        <p>The page you requested could not be found.</p>
+        <div class="error-links">
+            <a href="/">홈으로</a>
+            <a href="/about.html">소개</a>
+            <a href="/contact.html">문의</a>
+        </div>
+    </div>
+</body>
+</html>
