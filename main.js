@@ -8,16 +8,17 @@ if (supportedLangs.includes(userLang.substr(0, 2))) {
 }
 
 const path = window.location.pathname.split('/').pop();
+const currentPath = window.location.pathname;
 const isKoPage = path.includes('-ko.html') || path === 'index-ko.html';
 
 if (lang === 'ko' && !isKoPage) {
     let newPath = path.replace('.html', '-ko.html');
-    if(path === '' || path === 'index.html') newPath = 'index-ko.html';
-    window.location.href = newPath;
+    if(path === '' || path === 'index.html') newPath = '/index-ko.html';
+    if (currentPath !== newPath) window.location.href = newPath;
 } else if (lang === 'en' && isKoPage) {
     let newPath = path.replace('-ko.html', '.html');
-     if(path === 'index-ko.html') newPath = 'index.html';
-    window.location.href = newPath;
+     if(path === 'index-ko.html') newPath = '/index.html';
+    if (currentPath !== newPath) window.location.href = newPath;
 }
 
 document.querySelectorAll('.lang-dropdown a').forEach(a => {
