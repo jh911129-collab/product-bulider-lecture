@@ -67,6 +67,46 @@ a:hover {
     gap: 1.5rem;
 }
 
+.language-switcher {
+    position: relative;
+}
+
+.language-switcher:hover .lang-dropdown {
+    display: block;
+}
+
+.current-lang {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lang-dropdown li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.lang-dropdown li a:hover {
+    background-color: #f5f5f5;
+}
+
+
+
 /* --- Main Content --- */
 .page-header {
     text-align: center;
